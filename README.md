@@ -1,3 +1,20 @@
+---
+license: mit
+language:
+- pt
+tags:
+- hate-speech-detection
+- lgbtqia
+- portuguese
+- cyberbullying
+- social-media
+size_categories:
+- 10K<n<100K
+task_categories:
+- text-classification
+- text-retrieval
+---
+
 # Base de Dados de Ódio contra Pessoas LGBTQIA+ em Português (PT-BR)
 
 Coleção de datasets para detecção de discurso de ódio contra pessoas LGBTQIA+ em português brasileiro.
@@ -31,6 +48,7 @@ Este dataset foi criado a partir de uma **onda de ódio real** sofrida pelo podc
 - **Colunas**: `text`, `class`
 - **Classes**: `transfobia`, `assedio_insulto`
 - **Uso**: Treinamento de modelo especializado
+- **Origem**: Anotações manuais da equipe da Código Não Binário sobre ódio sofrido com o podcast Entre Amigues
 
 #### `datasets/dataset_manual_final.csv`
 - **2.053 exemplos** de anotações manuais
@@ -47,17 +65,13 @@ Este dataset foi criado a partir de uma **onda de ódio real** sofrida pelo podc
 - **Colunas**: `id`, `text`, `is_hate`
 - **Uso**: Dados de treinamento
 
-#### `datasets/dataset_lgbt_data_final.csv`
-- **289 exemplos** de dados LGBT
-- **Colunas**: `text`, `is_hate`
-- **Uso**: Dados complementares
+### Datasets das Fontes Originais
 
-#### `datasets/dataset_clean_base_final.csv`
-- **2.053 exemplos** de base limpa
-- **Colunas**: `id`, `text`
-- **Uso**: Aplicação do modelo
-
-### Datasets Originais
+#### `datasets/dataset_manual_source.csv`
+- **Anotações manuais** processadas
+- **Colunas**: `id`, `text`, `is_hate`
+- **Origem**: `Scrapping_insta_annotated_GLOBAL_REVISADO.csv`
+- **Contexto**: Dados do Instagram coletados durante onda de ódio sofrida pelo podcast Entre Amigues
 
 #### `datasets_originais/anti-lgbt-cyberbullying.csv`
 - Dataset original em inglês (4.300 exemplos)
@@ -66,10 +80,6 @@ Este dataset foi criado a partir de uma **onda de ódio real** sofrida pelo podc
 #### `datasets_originais/told-br.csv`
 - Dataset ToLD-BR original (21.000 exemplos)
 - Anotações em português brasileiro
-
-#### `datasets_originais/lgbt_data.csv`
-- Dataset LGBT Data original (289 exemplos)
-- Dados públicos do Twitter
 
 ## 🔒 Privacidade e Ética
 
@@ -137,6 +147,24 @@ tokenizer = AutoTokenizer.from_pretrained("neuralmind/bert-base-portuguese-cased
 - **Bias**: Análise de viés e estereótipos
 - **Diversidade**: Representação de diferentes contextos
 
+## 📊 Fontes dos Datasets Utilizados
+
+### Modelos Base
+- **BERTimbau**: https://hf.co/neuralmind/bert-base-portuguese-cased
+- **Helsinki-NLP Translation**: https://hf.co/Helsinki-NLP/opus-mt-tc-big-en-pt
+
+### Datasets Externos
+- **ToLD-BR**: https://github.com/joaoaleite/ToLD-Br/
+- **Anti-LGBT Cyberbullying**: https://www.kaggle.com/datasets/kw5454331/anti-lgbt-cyberbullying-texts/data
+
+### Dataset de Treinamento do BERTimbau
+- **HateBR**: https://hf.co/datasets/ruanchaves/hatebr (excluído por data leakage)
+
+### Contexto Social
+- **Dados manuais**: Anotações da equipe Código Não Binário sobre o podcast Entre Amigues
+- **ToLD-BR**: Dataset brasileiro de toxicidade (GitHub)
+- **Anti-LGBT**: Dataset inglês traduzido para PT-BR (Kaggle)
+
 ## 🤝 Contribuição
 
 ### Como Contribuir
@@ -157,8 +185,8 @@ MIT License - Veja LICENSE para detalhes.
 
 ## 🔗 Links Relacionados
 
-- [Radar Social LGBTQIA+](https://github.com/seu-usuario/radar-social-lgbtqia)
-- [Hugging Face Datasets](https://huggingface.co/datasets/seu-usuario/base-dados-odio-lgbtqia)
+- [Radar Social LGBTQIA+](https://github.com/travahacker/radar-social-lgbtqia)
+- [Hugging Face Model](https://hf.co/Veronyka/radar-social-lgbtqia)
 
 ## ⚠️ Aviso Importante
 
