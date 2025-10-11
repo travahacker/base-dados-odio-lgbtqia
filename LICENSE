@@ -1,22 +1,50 @@
-MIT License
+LICENÇA POR COMPONENTE - BASE DE DADOS DE ÓDIO LGBTQIA+
 
-Copyright (c) 2025 Base de Dados de Ódio LGBTQIA+
-Copyright (c) 2025 Código Não Binário (https://codigonaobinario.org)
+Este dataset contém múltiplos componentes com licenças diferentes:
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+## 📊 COMPONENTES E SUAS LICENÇAS
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+### 1. Dados Manuais (Código Não Binário)
+- **Licença**: Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International
+- **Copyright**: (c) 2025 Código Não Binário (https://codigonaobinario.org)
+- **Uso**: Não comercial, atribuição obrigatória
+- **Link**: https://creativecommons.org/licenses/by-nc-sa/4.0/
+- **Conteúdo**: Anotações manuais sobre ódio sofrido pelo podcast Entre Amigues
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+### 2. Dataset ToLD-BR
+- **Licença**: MIT License
+- **Copyright**: João Leite
+- **Uso**: Comercial permitido
+- **Link**: https://github.com/joaoaleite/ToLD-Br/
+- **Conteúdo**: Dataset brasileiro de toxicidade
+
+### 3. Dataset Anti-LGBT Cyberbullying
+- **Licença**: Kaggle License
+- **Copyright**: kw5454331
+- **Uso**: Comercial permitido
+- **Link**: https://www.kaggle.com/datasets/kw5454331/anti-lgbt-cyberbullying-texts/data
+- **Conteúdo**: Dataset inglês traduzido para PT-BR
+
+### 4. Processamento e Integração
+- **Licença**: Apache License 2.0
+- **Copyright**: (c) 2025 Base de Dados de Ódio LGBTQIA+
+- **Uso**: Comercial permitido
+
+## 🔒 USO COMERCIAL
+
+Para uso comercial, consulte as licenças individuais de cada componente:
+- **Dados manuais**: Uso não comercial (CC BY-NC-SA 4.0)
+- **Datasets externos**: Uso comercial permitido (MIT/Kaggle)
+- **Processamento**: Uso comercial permitido (Apache 2.0)
+
+## ⚠️ ATRIBUIÇÃO OBRIGATÓRIA
+
+Independente do uso, a atribuição aos dados manuais da Código Não Binário é sempre obrigatória.
+
+## 🏳️‍🌈 CONTEXTO SOCIAL
+
+Este dataset foi criado a partir de uma onda de ódio real sofrida pelo podcast Entre Amigues da equipe Código Não Binário. Os dados foram coletados durante ataques coordenados nas redes sociais, especialmente no Instagram.
+
+## 📞 CONTATO
+
+Para questões sobre licenciamento ou uso comercial, entre em contato através das issues do repositório.
