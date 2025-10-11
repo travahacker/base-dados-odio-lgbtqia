@@ -185,8 +185,14 @@ MIT License - Veja LICENSE para detalhes.
 
 ## 🔗 Links Relacionados
 
+### 📚 Projetos
 - [Radar Social LGBTQIA+](https://github.com/travahacker/radar-social-lgbtqia)
 - [Hugging Face Model](https://hf.co/Veronyka/radar-social-lgbtqia)
+- [Hugging Face Dataset](https://hf.co/datasets/Veronyka/base-dados-odio-lgbtqia)
+
+### 🏳️‍🌈 Código Não Binário
+- [Site Oficial](https://codigonaobinario.org)
+- [Entre Amigues - Linktree](https://linktr.ee/entre_amigues)
 
 ## ⚠️ Aviso Importante
 
