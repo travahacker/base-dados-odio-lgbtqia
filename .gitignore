@@ -62,7 +62,6 @@ checkpoint-*/
 *.safetensors
 
 # Data files (if too large)
-*.csv
 *.json
 *.pkl
 *.joblib
