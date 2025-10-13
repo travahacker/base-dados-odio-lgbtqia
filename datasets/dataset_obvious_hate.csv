@@ -1,0 +1,176 @@
+id,text,normalized_text,is_hate,source,created_at
+obvious_hate_0,gay deveria morrer,gay deveria morrer,1,obvious_hate,2025-10-11T19:22:53.848792
+obvious_hate_1,lésbica deveria morrer,lésbica deveria morrer,1,obvious_hate,2025-10-11T19:22:53.848806
+obvious_hate_2,trans deveria morrer,trans deveria morrer,1,obvious_hate,2025-10-11T19:22:53.848811
+obvious_hate_3,bicha deveria morrer,bicha deveria morrer,1,obvious_hate,2025-10-11T19:22:53.848816
+obvious_hate_4,viado deveria morrer,viado deveria morrer,1,obvious_hate,2025-10-11T19:22:53.848820
+obvious_hate_5,sapatão deveria morrer,sapatão deveria morrer,1,obvious_hate,2025-10-11T19:22:53.848824
+obvious_hate_6,paneleiro deveria morrer,paneleiro deveria morrer,1,obvious_hate,2025-10-11T19:22:53.848829
+obvious_hate_7,travesti deveria morrer,travesti deveria morrer,1,obvious_hate,2025-10-11T19:22:53.848838
+obvious_hate_8,ser gay é doença,ser gay é doença,1,obvious_hate,2025-10-11T19:22:53.848843
+obvious_hate_9,ser lésbica é doença,ser lésbica é doença,1,obvious_hate,2025-10-11T19:22:53.848847
+obvious_hate_10,ser trans é doença,ser trans é doença,1,obvious_hate,2025-10-11T19:22:53.848851
+obvious_hate_11,gay é doente,gay é doente,1,obvious_hate,2025-10-11T19:22:53.848855
+obvious_hate_12,lésbica é doente,lésbica é doente,1,obvious_hate,2025-10-11T19:22:53.848858
+obvious_hate_13,trans é doente,trans é doente,1,obvious_hate,2025-10-11T19:22:53.848862
+obvious_hate_14,gay é anormal,gay é anormal,1,obvious_hate,2025-10-11T19:22:53.848865
+obvious_hate_15,lésbica é anormal,lésbica é anormal,1,obvious_hate,2025-10-11T19:22:53.848869
+obvious_hate_16,trans é anormal,trans é anormal,1,obvious_hate,2025-10-11T19:22:53.848872
+obvious_hate_17,gay é patologia,gay é patologia,1,obvious_hate,2025-10-11T19:22:53.848875
+obvious_hate_18,lésbica é patologia,lésbica é patologia,1,obvious_hate,2025-10-11T19:22:53.848879
+obvious_hate_19,trans é patologia,trans é patologia,1,obvious_hate,2025-10-11T19:22:53.848882
+obvious_hate_20,ser gay é pecado,ser gay é pecado,1,obvious_hate,2025-10-11T19:22:53.848886
+obvious_hate_21,ser lésbica é pecado,ser lésbica é pecado,1,obvious_hate,2025-10-11T19:22:53.848890
+obvious_hate_22,ser trans é pecado,ser trans é pecado,1,obvious_hate,2025-10-11T19:22:53.848893
+obvious_hate_23,gay é pecador,gay é pecador,1,obvious_hate,2025-10-11T19:22:53.848897
+obvious_hate_24,lésbica é pecadora,lésbica é pecadora,1,obvious_hate,2025-10-11T19:22:53.848900
+obvious_hate_25,trans é pecador,trans é pecador,1,obvious_hate,2025-10-11T19:22:53.848904
+obvious_hate_26,gay vai para o inferno,gay vai para o inferno,1,obvious_hate,2025-10-11T19:22:53.848908
+obvious_hate_27,lésbica vai para o inferno,lésbica vai para o inferno,1,obvious_hate,2025-10-11T19:22:53.848912
+obvious_hate_28,trans vai para o inferno,trans vai para o inferno,1,obvious_hate,2025-10-11T19:22:53.848916
+obvious_hate_29,gay é condenado,gay é condenado,1,obvious_hate,2025-10-11T19:22:53.848919
+obvious_hate_30,lésbica é condenada,lésbica é condenada,1,obvious_hate,2025-10-11T19:22:53.848922
+obvious_hate_31,trans é condenado,trans é condenado,1,obvious_hate,2025-10-11T19:22:53.848926
+obvious_hate_32,gay de merda,gay de merda,1,obvious_hate,2025-10-11T19:22:53.848929
+obvious_hate_33,lésbica de merda,lésbica de merda,1,obvious_hate,2025-10-11T19:22:53.848933
+obvious_hate_34,trans de merda,trans de merda,1,obvious_hate,2025-10-11T19:22:53.848936
+obvious_hate_35,bicha de merda,bicha de merda,1,obvious_hate,2025-10-11T19:22:53.848940
+obvious_hate_36,viado de merda,viado de merda,1,obvious_hate,2025-10-11T19:22:53.848943
+obvious_hate_37,sapatão de merda,sapatão de merda,1,obvious_hate,2025-10-11T19:22:53.848947
+obvious_hate_38,paneleiro de merda,paneleiro de merda,1,obvious_hate,2025-10-11T19:22:53.848950
+obvious_hate_39,travesti de merda,travesti de merda,1,obvious_hate,2025-10-11T19:22:53.848953
+obvious_hate_40,gay é nojento,gay é nojento,1,obvious_hate,2025-10-11T19:22:53.848957
+obvious_hate_41,lésbica é nojenta,lésbica é nojenta,1,obvious_hate,2025-10-11T19:22:53.848960
+obvious_hate_42,trans é nojento,trans é nojento,1,obvious_hate,2025-10-11T19:22:53.848964
+obvious_hate_43,gay é repugnante,gay é repugnante,1,obvious_hate,2025-10-11T19:22:53.848967
+obvious_hate_44,lésbica é repugnante,lésbica é repugnante,1,obvious_hate,2025-10-11T19:22:53.848971
+obvious_hate_45,trans é repugnante,trans é repugnante,1,obvious_hate,2025-10-11T19:22:53.848974
+obvious_hate_46,odeio gays,odeio gays,1,obvious_hate,2025-10-11T19:22:53.848977
+obvious_hate_47,odeio lésbicas,odeio lésbicas,1,obvious_hate,2025-10-11T19:22:53.848980
+obvious_hate_48,odeio trans,odeio trans,1,obvious_hate,2025-10-11T19:22:53.848984
+obvious_hate_49,detesto gays,detesto gays,1,obvious_hate,2025-10-11T19:22:53.848987
+obvious_hate_50,detesto lésbicas,detesto lésbicas,1,obvious_hate,2025-10-11T19:22:53.848990
+obvious_hate_51,detesto trans,detesto trans,1,obvious_hate,2025-10-11T19:22:53.848993
+obvious_hate_52,tenho nojo de gays,tenho nojo de gays,1,obvious_hate,2025-10-11T19:22:53.848997
+obvious_hate_53,tenho nojo de lésbicas,tenho nojo de lésbicas,1,obvious_hate,2025-10-11T19:22:53.849001
+obvious_hate_54,tenho nojo de trans,tenho nojo de trans,1,obvious_hate,2025-10-11T19:22:53.849005
+obvious_hate_55,gays são lixo,gays são lixo,1,obvious_hate,2025-10-11T19:22:53.849008
+obvious_hate_56,lésbicas são lixo,lésbicas são lixo,1,obvious_hate,2025-10-11T19:22:53.849012
+obvious_hate_57,trans são lixo,trans são lixo,1,obvious_hate,2025-10-11T19:22:53.849015
+obvious_hate_58,gay não é gente,gay não é gente,1,obvious_hate,2025-10-11T19:22:53.849019
+obvious_hate_59,lésbica não é gente,lésbica não é gente,1,obvious_hate,2025-10-11T19:22:53.849022
+obvious_hate_60,trans não é gente,trans não é gente,1,obvious_hate,2025-10-11T19:22:53.849026
+obvious_hate_61,gay é animal,gay é animal,1,obvious_hate,2025-10-11T19:22:53.849030
+obvious_hate_62,lésbica é animal,lésbica é animal,1,obvious_hate,2025-10-11T19:22:53.849033
+obvious_hate_63,trans é animal,trans é animal,1,obvious_hate,2025-10-11T19:22:53.849036
+obvious_hate_64,gay é subhumano,gay é subhumano,1,obvious_hate,2025-10-11T19:22:53.849040
+obvious_hate_65,lésbica é subhumana,lésbica é subhumana,1,obvious_hate,2025-10-11T19:22:53.849043
+obvious_hate_66,trans é subhumano,trans é subhumano,1,obvious_hate,2025-10-11T19:22:53.849047
+obvious_hate_67,ele não é mulher,ele não é mulher,1,obvious_hate,2025-10-11T19:22:53.849051
+obvious_hate_68,ela não é homem,ela não é homem,1,obvious_hate,2025-10-11T19:22:53.849054
+obvious_hate_69,isso não é mulher,isso não é mulher,1,obvious_hate,2025-10-11T19:22:53.849057
+obvious_hate_70,isso não é homem,isso não é homem,1,obvious_hate,2025-10-11T19:22:53.849061
+obvious_hate_71,homem de saia,homem de saia,1,obvious_hate,2025-10-11T19:22:53.849064
+obvious_hate_72,mulher barbada,mulher barbada,1,obvious_hate,2025-10-11T19:22:53.849067
+obvious_hate_73,gay é pervertido,gay é pervertido,1,obvious_hate,2025-10-11T19:22:53.849071
+obvious_hate_74,lésbica é pervertida,lésbica é pervertida,1,obvious_hate,2025-10-11T19:22:53.849074
+obvious_hate_75,trans é pervertido,trans é pervertido,1,obvious_hate,2025-10-11T19:22:53.849077
+obvious_hate_76,gay é depravado,gay é depravado,1,obvious_hate,2025-10-11T19:22:53.849081
+obvious_hate_77,lésbica é depravada,lésbica é depravada,1,obvious_hate,2025-10-11T19:22:53.849084
+obvious_hate_78,trans é depravado,trans é depravado,1,obvious_hate,2025-10-11T19:22:53.849087
+obvious_hate_79,gays vão corromper as crianças,gays vão corromper as crianças,1,obvious_hate,2025-10-11T19:22:53.849092
+obvious_hate_80,lésbicas vão corromper as crianças,lésbicas vão corromper as crianças,1,obvious_hate,2025-10-11T19:22:53.849096
+obvious_hate_81,trans vão corromper as crianças,trans vão corromper as crianças,1,obvious_hate,2025-10-11T19:22:53.849100
+obvious_hate_82,protejam as crianças dos gays,protejam as crianças dos gays,1,obvious_hate,2025-10-11T19:22:53.849104
+obvious_hate_83,protejam as crianças das lésbicas,protejam as crianças das lésbicas,1,obvious_hate,2025-10-11T19:22:53.849108
+obvious_hate_84,protejam as crianças dos trans,protejam as crianças dos trans,1,obvious_hate,2025-10-11T19:22:53.849112
+obvious_hate_85,gay é escolha,gay é escolha,1,obvious_hate,2025-10-11T19:22:53.849115
+obvious_hate_86,lésbica é escolha,lésbica é escolha,1,obvious_hate,2025-10-11T19:22:53.849119
+obvious_hate_87,trans é escolha,trans é escolha,1,obvious_hate,2025-10-11T19:22:53.849122
+obvious_hate_88,gay pode ser curado,gay pode ser curado,1,obvious_hate,2025-10-11T19:22:53.849126
+obvious_hate_89,lésbica pode ser curada,lésbica pode ser curada,1,obvious_hate,2025-10-11T19:22:53.849131
+obvious_hate_90,trans pode ser curado,trans pode ser curado,1,obvious_hate,2025-10-11T19:22:53.849136
+obvious_hate_91,gay é moda,gay é moda,1,obvious_hate,2025-10-11T19:22:53.849146
+obvious_hate_92,lésbica é moda,lésbica é moda,1,obvious_hate,2025-10-11T19:22:53.849150
+obvious_hate_93,trans é moda,trans é moda,1,obvious_hate,2025-10-11T19:22:53.849154
+obvious_nohate_94,gay é legal,gay é legal,0,obvious_nohate,2025-10-11T19:22:53.849157
+obvious_nohate_95,lésbica é legal,lésbica é legal,0,obvious_nohate,2025-10-11T19:22:53.849161
+obvious_nohate_96,trans é legal,trans é legal,0,obvious_nohate,2025-10-11T19:22:53.849164
+obvious_nohate_97,apoio os gays,apoio os gays,0,obvious_nohate,2025-10-11T19:22:53.849168
+obvious_nohate_98,apoio as lésbicas,apoio as lésbicas,0,obvious_nohate,2025-10-11T19:22:53.849171
+obvious_nohate_99,apoio os trans,apoio os trans,0,obvious_nohate,2025-10-11T19:22:53.849175
+obvious_nohate_100,gays são pessoas,gays são pessoas,0,obvious_nohate,2025-10-11T19:22:53.849178
+obvious_nohate_101,lésbicas são pessoas,lésbicas são pessoas,0,obvious_nohate,2025-10-11T19:22:53.849182
+obvious_nohate_102,trans são pessoas,trans são pessoas,0,obvious_nohate,2025-10-11T19:22:53.849186
+obvious_nohate_103,direitos dos gays,direitos dos gays,0,obvious_nohate,2025-10-11T19:22:53.849189
+obvious_nohate_104,direitos das lésbicas,direitos das lésbicas,0,obvious_nohate,2025-10-11T19:22:53.849193
+obvious_nohate_105,direitos dos trans,direitos dos trans,0,obvious_nohate,2025-10-11T19:22:53.849196
+obvious_nohate_106,orgulho gay,orgulho gay,0,obvious_nohate,2025-10-11T19:22:53.849199
+obvious_nohate_107,orgulho lésbico,orgulho lésbico,0,obvious_nohate,2025-10-11T19:22:53.849203
+obvious_nohate_108,orgulho trans,orgulho trans,0,obvious_nohate,2025-10-11T19:22:53.849206
+obvious_nohate_109,gay é normal,gay é normal,0,obvious_nohate,2025-10-11T19:22:53.849210
+obvious_nohate_110,lésbica é normal,lésbica é normal,0,obvious_nohate,2025-10-11T19:22:53.849213
+obvious_nohate_111,trans é normal,trans é normal,0,obvious_nohate,2025-10-11T19:22:53.849217
+obvious_nohate_112,gay é humano,gay é humano,0,obvious_nohate,2025-10-11T19:22:53.849220
+obvious_nohate_113,lésbica é humana,lésbica é humana,0,obvious_nohate,2025-10-11T19:22:53.849224
+obvious_nohate_114,trans é humano,trans é humano,0,obvious_nohate,2025-10-11T19:22:53.849227
+obvious_nohate_115,gay é válido,gay é válido,0,obvious_nohate,2025-10-11T19:22:53.849232
+obvious_nohate_116,lésbica é válida,lésbica é válida,0,obvious_nohate,2025-10-11T19:22:53.849236
+obvious_nohate_117,trans é válido,trans é válido,0,obvious_nohate,2025-10-11T19:22:53.849240
+obvious_nohate_118,gay é respeitável,gay é respeitável,0,obvious_nohate,2025-10-11T19:22:53.849243
+obvious_nohate_119,lésbica é respeitável,lésbica é respeitável,0,obvious_nohate,2025-10-11T19:22:53.849247
+obvious_nohate_120,trans é respeitável,trans é respeitável,0,obvious_nohate,2025-10-11T19:22:53.849250
+obvious_nohate_121,gay é digno,gay é digno,0,obvious_nohate,2025-10-11T19:22:53.849254
+obvious_nohate_122,lésbica é digna,lésbica é digna,0,obvious_nohate,2025-10-11T19:22:53.849257
+obvious_nohate_123,trans é digno,trans é digno,0,obvious_nohate,2025-10-11T19:22:53.849260
+obvious_nohate_124,gay é amado,gay é amado,0,obvious_nohate,2025-10-11T19:22:53.849264
+obvious_nohate_125,lésbica é amada,lésbica é amada,0,obvious_nohate,2025-10-11T19:22:53.849267
+obvious_nohate_126,trans é amado,trans é amado,0,obvious_nohate,2025-10-11T19:22:53.849270
+obvious_nohate_127,gay é aceito,gay é aceito,0,obvious_nohate,2025-10-11T19:22:53.849274
+obvious_nohate_128,lésbica é aceita,lésbica é aceita,0,obvious_nohate,2025-10-11T19:22:53.849277
+obvious_nohate_129,trans é aceito,trans é aceito,0,obvious_nohate,2025-10-11T19:22:53.849281
+obvious_nohate_130,gay é bem-vindo,gay é bemvindo,0,obvious_nohate,2025-10-11T19:22:53.849284
+obvious_nohate_131,lésbica é bem-vinda,lésbica é bemvinda,0,obvious_nohate,2025-10-11T19:22:53.849288
+obvious_nohate_132,trans é bem-vindo,trans é bemvindo,0,obvious_nohate,2025-10-11T19:22:53.849292
+obvious_nohate_133,gay é importante,gay é importante,0,obvious_nohate,2025-10-11T19:22:53.849296
+obvious_nohate_134,lésbica é importante,lésbica é importante,0,obvious_nohate,2025-10-11T19:22:53.849299
+obvious_nohate_135,trans é importante,trans é importante,0,obvious_nohate,2025-10-11T19:22:53.849303
+obvious_nohate_136,gay é especial,gay é especial,0,obvious_nohate,2025-10-11T19:22:53.849306
+obvious_nohate_137,lésbica é especial,lésbica é especial,0,obvious_nohate,2025-10-11T19:22:53.849310
+obvious_nohate_138,trans é especial,trans é especial,0,obvious_nohate,2025-10-11T19:22:53.849313
+obvious_nohate_139,gay é único,gay é único,0,obvious_nohate,2025-10-11T19:22:53.849316
+obvious_nohate_140,lésbica é única,lésbica é única,0,obvious_nohate,2025-10-11T19:22:53.849320
+obvious_nohate_141,trans é único,trans é único,0,obvious_nohate,2025-10-11T19:22:53.849323
+obvious_nohate_142,gay é belo,gay é belo,0,obvious_nohate,2025-10-11T19:22:53.849326
+obvious_nohate_143,lésbica é bela,lésbica é bela,0,obvious_nohate,2025-10-11T19:22:53.849330
+obvious_nohate_144,trans é belo,trans é belo,0,obvious_nohate,2025-10-11T19:22:53.849338
+obvious_nohate_145,gay é forte,gay é forte,0,obvious_nohate,2025-10-11T19:22:53.849341
+obvious_nohate_146,lésbica é forte,lésbica é forte,0,obvious_nohate,2025-10-11T19:22:53.849345
+obvious_nohate_147,trans é forte,trans é forte,0,obvious_nohate,2025-10-11T19:22:53.849348
+obvious_nohate_148,gay é corajoso,gay é corajoso,0,obvious_nohate,2025-10-11T19:22:53.849351
+obvious_nohate_149,lésbica é corajosa,lésbica é corajosa,0,obvious_nohate,2025-10-11T19:22:53.849355
+obvious_nohate_150,trans é corajoso,trans é corajoso,0,obvious_nohate,2025-10-11T19:22:53.849359
+obvious_nohate_151,gay é inspirador,gay é inspirador,0,obvious_nohate,2025-10-11T19:22:53.849362
+obvious_nohate_152,lésbica é inspiradora,lésbica é inspiradora,0,obvious_nohate,2025-10-11T19:22:53.849366
+obvious_nohate_153,trans é inspirador,trans é inspirador,0,obvious_nohate,2025-10-11T19:22:53.849369
+obvious_nohate_154,gay é valente,gay é valente,0,obvious_nohate,2025-10-11T19:22:53.849372
+obvious_nohate_155,lésbica é valente,lésbica é valente,0,obvious_nohate,2025-10-11T19:22:53.849376
+obvious_nohate_156,trans é valente,trans é valente,0,obvious_nohate,2025-10-11T19:22:53.849379
+obvious_nohate_157,gay é admirável,gay é admirável,0,obvious_nohate,2025-10-11T19:22:53.849383
+obvious_nohate_158,lésbica é admirável,lésbica é admirável,0,obvious_nohate,2025-10-11T19:22:53.849386
+obvious_nohate_159,trans é admirável,trans é admirável,0,obvious_nohate,2025-10-11T19:22:53.849390
+obvious_nohate_160,gay é respeitado,gay é respeitado,0,obvious_nohate,2025-10-11T19:22:53.849393
+obvious_nohate_161,lésbica é respeitada,lésbica é respeitada,0,obvious_nohate,2025-10-11T19:22:53.849397
+obvious_nohate_162,trans é respeitado,trans é respeitado,0,obvious_nohate,2025-10-11T19:22:53.849400
+obvious_nohate_163,gay é valorizado,gay é valorizado,0,obvious_nohate,2025-10-11T19:22:53.849403
+obvious_nohate_164,lésbica é valorizada,lésbica é valorizada,0,obvious_nohate,2025-10-11T19:22:53.849407
+obvious_nohate_165,trans é valorizado,trans é valorizado,0,obvious_nohate,2025-10-11T19:22:53.849410
+obvious_nohate_166,gay é estimado,gay é estimado,0,obvious_nohate,2025-10-11T19:22:53.849413
+obvious_nohate_167,lésbica é estimada,lésbica é estimada,0,obvious_nohate,2025-10-11T19:22:53.849417
+obvious_nohate_168,trans é estimado,trans é estimado,0,obvious_nohate,2025-10-11T19:22:53.849420
+obvious_nohate_169,gay é querido,gay é querido,0,obvious_nohate,2025-10-11T19:22:53.849424
+obvious_nohate_170,lésbica é querida,lésbica é querida,0,obvious_nohate,2025-10-11T19:22:53.849427
+obvious_nohate_171,trans é querido,trans é querido,0,obvious_nohate,2025-10-11T19:22:53.849430
+obvious_nohate_172,gay é amado,gay é amado,0,obvious_nohate,2025-10-11T19:22:53.849434
+obvious_nohate_173,lésbica é amada,lésbica é amada,0,obvious_nohate,2025-10-11T19:22:53.849437
+obvious_nohate_174,trans é amado,trans é amado,0,obvious_nohate,2025-10-11T19:22:53.849440
