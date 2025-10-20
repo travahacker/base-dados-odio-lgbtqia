@@ -18,6 +18,7 @@ Dataset para detecção de hate speech contra pessoas LGBTQIA+ em português bra
 
 - **Dataset Binário**: Hate vs não-hate (expandido com ToLD-BR)
 - **Dataset Especializado**: Transfobia vs Assédio/Insulto
+- **Dataset Três Redes Sociais**: Instagram, TikTok e YouTube
 - **Regras Contextuais**: Protege termos de gênero
 - **Anotações Manuais**: Validadas por especialistas
 
@@ -27,6 +28,7 @@ Dataset para detecção de hate speech contra pessoas LGBTQIA+ em português bra
 - **Dataset manual**: 2.053 exemplos
 - **Dataset especializado**: 385.146 exemplos
 - **Dataset ToLD-BR**: 1.942.521 exemplos
+- **Dataset três redes sociais**: 12.102 exemplos
 
 ## 🎯 Regras Contextuais
 
@@ -49,7 +51,10 @@ datasets/
 ├── dataset_manual_final.csv                   # Dataset manual
 ├── dataset_specialized_final.csv              # Dataset especializado
 ├── dataset_toldbr_final.csv                  # Dataset ToLD-BR
-└── dataset_obvious_hate.csv                  # Casos óbvios de hate
+├── dataset_obvious_hate.csv                  # Casos óbvios de hate
+├── dataset_three_platforms_20251020_140406.csv    # Dataset três redes sociais
+├── dataset_three_platforms_clean_20251020_140406.csv  # Dataset limpo
+└── README_three_platforms_20251020_140406.md         # Documentação
 ```
 
 ## 🚀 Como Usar
@@ -65,6 +70,9 @@ df_manual = pd.read_csv("dataset_manual_final.csv")
 
 # Carregar dataset especializado
 df_specialized = pd.read_csv("dataset_specialized_final.csv")
+
+# Carregar dataset três redes sociais
+df_three_platforms = pd.read_csv("dataset_three_platforms_20251020_140406.csv")
 ```
 
 ## 📈 Melhorias Recentes
@@ -74,12 +82,23 @@ df_specialized = pd.read_csv("dataset_specialized_final.csv")
 - ✅ Proteção de termos de dissidência de gênero
 - ✅ Detecção de contexto positivo vs negativo
 - ✅ Threshold adaptativo otimizado
+- ✅ **NOVO**: Dataset com dados das três redes sociais (Instagram, TikTok, YouTube)
 
 ## 🔗 Links
 
 - **Modelo**: [radar-social-lgbtqia](https://huggingface.co/Veronyka/radar-social-lgbtqia)
 - **Space**: [radar-social-lgbtqia-space](https://huggingface.co/spaces/Veronyka/radar-social-lgbtqia-space)
+- **Dataset HF**: [base-dados-odio-lgbtqia](https://huggingface.co/datasets/Veronyka/base-dados-odio-lgbtqia)
 
 ## ⚠️ Importante
 
 Este dataset foi desenvolvido para proteger a comunidade LGBTQIA+ e detectar discurso de ódio. As regras contextuais garantem que termos de identidade de gênero sejam respeitados.
+
+## 📊 Dataset Três Redes Sociais
+
+O novo dataset inclui dados coletados de três redes sociais:
+- **Instagram**: 2.098 comentários
+- **TikTok**: 6.271 comentários  
+- **YouTube**: 3.733 comentários
+
+**Total**: 12.102 comentários consolidados para análise e treinamento de modelos.
