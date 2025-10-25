@@ -1,3 +1,22 @@
+---
+license: mit
+task: text-classification
+language:
+- pt-br
+tags:
+- portuguese
+- lgbtqia
+- hate-speech
+- transgender
+- transfobia
+- ódio
+- hatespeech
+size_categories:
+- n<1K
+- 1K<n<10K
+- 10K<n<100K
+---
+
 # 🏳️‍🌈 Base de Dados de Ódio contra Pessoas LGBTQIA+ - Versão Processada
 
 ## 🎯 Objetivo
