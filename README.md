@@ -158,7 +158,6 @@ cc-by-nc-sa-4.0 - Creative Commons Attribution-NonCommercial-ShareAlike 4.0 Inte
 
 - **Modelo treinado:** [tupi-bert-lgbtqia-trained](https://huggingface.co/Veronyka/tupi-bert-lgbtqia-trained)
 - **Space de análise:** [radar-social-lgbtqia-v2](https://huggingface.co/spaces/Veronyka/radar-social-lgbtqia-v2)
-- **GitHub do Projeto:** Código Não Binário
 
 ---
 
