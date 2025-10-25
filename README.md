@@ -2,7 +2,7 @@
 license: mit
 task: text-classification
 language:
-- pt-br
+- pt
 tags:
 - portuguese
 - lgbtqia
