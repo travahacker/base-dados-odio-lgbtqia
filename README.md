@@ -1,6 +1,6 @@
 ---
 language:
-  - pt-br
+  - pt
 tags:
   - portuguese
   - lgbtqia
