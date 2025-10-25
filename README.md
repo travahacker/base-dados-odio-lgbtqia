@@ -1,104 +1,177 @@
 ---
-license: cc-by-nc-sa-4.0
 language:
-- pt
+  - pt-br
 tags:
-- hate-speech-detection
-- lgbtqia
-- portuguese
-- dataset
-short_description: Dataset para detecção de hate speech LGBTQIA+ em português
+  - portuguese
+  - lgbtqia
+  - hate-speech
+  - hatespeech
+  - ódio
+  - transfobia
+  - transphobia
+license: mit
 ---
 
-# 🏳️‍🌈 Base de Dados de Ódio LGBTQIA+
+# Base de Dados de Ódio contra Pessoas LGBTQIA+ em Português (PT-BR)
 
-Dataset para detecção de hate speech contra pessoas LGBTQIA+ em português brasileiro com **regras contextuais** para proteger termos de dissidência de gênero.
+Coleção de bases de dados para detecção de discurso de ódio contra pessoas LGBTQIA+ em português brasileiro.
 
-## ✨ Funcionalidades
+## 📊 Bases Disponíveis
 
-- **Dataset Binário**: Hate vs não-hate (expandido com ToLD-BR)
-- **Dataset Especializado**: Transfobia vs Assédio/Insulto
-- **Dataset Três Redes Sociais**: Instagram, TikTok e YouTube
-- **Regras Contextuais**: Protege termos de gênero
-- **Anotações Manuais**: Validadas por especialistas
+### 1. **base-geral-odio-lgbt.csv**
+- **12.102 textos** de três plataformas (Instagram, TikTok, YouTube)
+- **Coluna:** `text` (conteúdo dos comentários)
+- **Uso:** Base principal para treinamento de modelos
+- **Origem:** Comentários do podcast Entre Amigues
 
-## 📊 Estatísticas
+### 2. **base-instagram-separada-odio-lgbt.csv**
+- **2.098 textos** do Instagram
+- **Coluna:** `text` (conteúdo dos comentários)
+- **Uso:** Análise específica do Instagram
+- **Origem:** Comentários do podcast Entre Amigues no Instagram
 
-- **Total de exemplos**: 4.780.095 (dataset binário expandido)
-- **Dataset manual**: 2.053 exemplos
-- **Dataset especializado**: 385.146 exemplos
-- **Dataset ToLD-BR**: 1.942.521 exemplos
-- **Dataset três redes sociais**: 12.102 exemplos
+### 3. **base-tiktok-separada-odio-lgbt.csv**
+- **6.271 textos** do TikTok
+- **Coluna:** `text` (conteúdo dos comentários)
+- **Uso:** Análise específica do TikTok
+- **Origem:** Comentários do podcast Entre Amigues no TikTok
 
-## 🎯 Regras Contextuais
+### 4. **base-youtube-separada-odio-lgbt.csv**
+- **3.733 textos** do YouTube
+- **Coluna:** `text` (conteúdo dos comentários)
+- **Uso:** Análise específica do YouTube
+- **Origem:** Comentários do podcast Entre Amigues no YouTube
 
-### Proteção de Termos de Gênero
-- **"boyceta"**: Detecta contexto positivo vs negativo
-- **"sapatão"**: Protege identidade lésbica
-- **"travesti"**: Respeita identidade trans
+## 🎯 Objetivo
 
-### Contextos Detectados
-- **Positivo**: orgulho, beleza, identidade, expressão
-- **Negativo**: nojo, escroto, desgraçado, arrombado
-- **Educativo**: definição, conceito, explicação
-- **Ridicularização**: engraçado, hilário, cômico
+Fornecer dados de treinamento e validação para sistemas de detecção de discurso de ódio contra pessoas LGBTQIA+ em português brasileiro.
 
-## 📁 Estrutura
+## 📢 Contexto Social
 
-```
-datasets/
-├── dataset_binary_expanded_with_toldbr.csv    # Dataset binário expandido
-├── dataset_manual_final.csv                   # Dataset manual
-├── dataset_specialized_final.csv              # Dataset especializado
-├── dataset_toldbr_final.csv                  # Dataset ToLD-BR
-├── dataset_obvious_hate.csv                  # Casos óbvios de hate
-├── dataset_three_platforms_20251020_140406.csv    # Dataset três redes sociais
-├── dataset_three_platforms_clean_20251020_140406.csv  # Dataset limpo
-└── README_three_platforms_20251020_140406.md         # Documentação
-```
+Este dataset foi criado a partir de uma **onda de ódio real** sofrida pelo podcast **Entre Amigues** da equipe **Código Não Binário**. Os dados foram coletados durante ataques coordenados nas redes sociais, especialmente no Instagram, onde comentários transfóbicos e de assédio foram direcionados ao podcast e sua audiência LGBTQIA+.
+
+### Impacto Social
+
+- **Podcast**: Entre Amigues (<https://linktr.ee/entre_amigues>) da Código Não Binário
+- **Período**: Coleta durante onda de ódio coordenada
+- **Redes Sociais**: Instagram, TikTok, YouTube
+- **Anotadores**: Equipe especializada em direitos LGBTQIA+
+- **Objetivo**: Documentar e combater discurso de ódio real
 
 ## 🚀 Como Usar
+
+### Carregamento Simples
 
 ```python
 import pandas as pd
 
-# Carregar dataset binário
-df_binary = pd.read_csv("dataset_binary_expanded_with_toldbr.csv")
+# Base geral
+df_geral = pd.read_csv('base-geral-odio-lgbt.csv')
+print(f"Total de textos: {len(df_geral)}")
 
-# Carregar dataset manual
-df_manual = pd.read_csv("dataset_manual_final.csv")
+# Instagram
+df_instagram = pd.read_csv('base-instagram-separada-odio-lgbt.csv')
+print(f"Textos Instagram: {len(df_instagram)}")
 
-# Carregar dataset especializado
-df_specialized = pd.read_csv("dataset_specialized_final.csv")
+# TikTok
+df_tiktok = pd.read_csv('base-tiktok-separada-odio-lgbt.csv')
+print(f"Textos TikTok: {len(df_tiktok)}")
 
-# Carregar dataset três redes sociais
-df_three_platforms = pd.read_csv("dataset_three_platforms_20251020_140406.csv")
+# YouTube
+df_youtube = pd.read_csv('base-youtube-separada-odio-lgbt.csv')
+print(f"Textos YouTube: {len(df_youtube)}")
 ```
 
-## 📈 Melhorias Recentes
+### Treinamento de Modelo
 
-- ✅ Integração com ToLD-BR
-- ✅ Regras contextuais implementadas
-- ✅ Proteção de termos de dissidência de gênero
-- ✅ Detecção de contexto positivo vs negativo
-- ✅ Threshold adaptativo otimizado
-- ✅ **NOVO**: Dataset com dados das três redes sociais (Instagram, TikTok, YouTube)
+```python
+from transformers import AutoTokenizer, AutoModelForSequenceClassification
 
-## 🔗 Links
+# Carregar dados
+train_df = pd.read_csv('base-geral-odio-lgbt.csv')
 
-- **Modelo**: [radar-social-lgbtqia](https://huggingface.co/Veronyka/radar-social-lgbtqia)
-- **Space**: [radar-social-lgbtqia-space](https://huggingface.co/spaces/Veronyka/radar-social-lgbtqia-space)
-- **Dataset HF**: [base-dados-odio-lgbtqia](https://huggingface.co/datasets/Veronyka/base-dados-odio-lgbtqia)
+# Preparar para treinamento
+tokenizer = AutoTokenizer.from_pretrained("neuralmind/bert-base-portuguese-cased")
+# ... código de treinamento
+```
 
-## ⚠️ Importante
+## 📈 Estatísticas
 
-Este dataset foi desenvolvido para proteger a comunidade LGBTQIA+ e detectar discurso de ódio. As regras contextuais garantem que termos de identidade de gênero sejam respeitados.
+### Distribuição por Plataforma
 
-## 📊 Dataset Três Redes Sociais
+- **Total**: 12.102 textos
+- **Instagram**: 2.098 textos (17.3%)
+- **TikTok**: 6.271 textos (51.8%)
+- **YouTube**: 3.733 textos (30.9%)
 
-O novo dataset inclui dados coletados de três redes sociais:
-- **Instagram**: 2.098 comentários
-- **TikTok**: 6.271 comentários  
-- **YouTube**: 3.733 comentários
+### Modelo Treinado
 
-**Total**: 12.102 comentários consolidados para análise e treinamento de modelos.
+Os dados foram utilizados para treinar o modelo **Veronyka/tupi-bert-lgbtqia-trained** com:
+- **Performance**: 98.4% accuracy
+- **Base**: Tupi-BERT-Large
+- **Método**: Curriculum Learning + RLHF
+
+## 🔒 Privacidade e Ética
+
+### Medidas de Privacidade
+
+- **Dados pessoais removidos**: Nomes de usuário, IDs, URLs
+- **Anonimização**: IDs substituídos por hashes
+- **Normalização**: Menções (@usuario) → [MENTION]
+- **Conformidade**: LGPD/GDPR compliant
+
+### Processamento Aplicado
+
+- URLs → `[URL]`
+- @usuario → `[MENTION]`
+- #hashtag → `[HASHTAG]`
+- Remoção de textos < 3 caracteres
+- Preservação apenas do conteúdo linguístico
+
+## 📊 Qualidade dos Dados
+
+### Anotações
+
+- **Anotadores**: Especialistas em direitos LGBTQIA+
+- **Consenso**: Validação cruzada entre anotadores
+- **Origem**: Comentários reais de ódio coordenado
+
+## 🤝 Contribuição
+
+Para contribuir com este dataset:
+
+1. Fork o repositório
+2. Adicione novos dados (seguindo padrões de privacidade)
+3. Valide anotações existentes
+4. Submeta pull request
+
+### Padrões de Qualidade
+
+- Dados pessoais removidos
+- Anotações consistentes
+- Documentação completa
+- Testes de validação
+
+## 📄 Licença
+
+MIT License
+
+## 🔗 Links Relacionados
+
+- **Modelo Treinado**: [Veronyka/tupi-bert-lgbtqia-trained](https://huggingface.co/Veronyka/tupi-bert-lgbtqia-trained)
+- **Radar Social LGBTQIA+**: [Veronyka/radar-social-lgbtqia-v2](https://huggingface.co/spaces/Veronyka/radar-social-lgbtqia-v2)
+- **Podcast Entre Amigues**: <https://linktr.ee/entre_amigues>
+
+## ⚠️ Aviso Importante
+
+Este dataset contém conteúdo sensível relacionado a discurso de ódio. Use com responsabilidade e sempre considere o impacto ético de suas aplicações.
+
+## 📞 Contato
+
+Para questões sobre o dataset ou colaborações, entre em contato através das issues do repositório.
+
+---
+
+**Desenvolvido por:** Veronyka Gimenes  
+**Data:** Outubro 2025  
+**License:** MIT
