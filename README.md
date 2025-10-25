@@ -12,93 +12,164 @@ short_description: Dataset para detecção de hate speech LGBTQIA+ em português
 
 # 🏳️‍🌈 Base de Dados de Ódio LGBTQIA+
 
-Dataset para detecção de hate speech contra pessoas LGBTQIA+ em português brasileiro com **regras contextuais** para proteger termos de dissidência de gênero.
+Dataset para detecção de hate speech contra pessoas LGBTQIA+ em português brasileiro, contendo comentários coletados de três redes sociais.
 
-## ✨ Funcionalidades
+## 🎯 Objetivo
 
-- **Dataset Binário**: Hate vs não-hate (expandido com ToLD-BR)
-- **Dataset Especializado**: Transfobia vs Assédio/Insulto
-- **Dataset Três Redes Sociais**: Instagram, TikTok e YouTube
-- **Regras Contextuais**: Protege termos de gênero
-- **Anotações Manuais**: Validadas por especialistas
+Fornecer bases de dados limpas e organizadas de comentários de ódio contra pessoas LGBTQIA+ em português brasileiro, prontas para uso por pesquisadores e desenvolvedores.
 
-## 📊 Estatísticas
+## 📊 Datasets Incluídos
 
-- **Total de exemplos**: 4.780.095 (dataset binário expandido)
-- **Dataset manual**: 2.053 exemplos
-- **Dataset especializado**: 385.146 exemplos
-- **Dataset ToLD-BR**: 1.942.521 exemplos
-- **Dataset três redes sociais**: 12.102 exemplos
+### 📱 **base-geral-odio-lgbt.csv**
+- **Total:** 12.102 registros
+- **Plataformas:** Instagram, TikTok, YouTube
+- **Conteúdo:** Comentários coletados durante onda de ódio contra o podcast Entre Amigues
+- **Estrutura:** Apenas coluna `text` (comentários limpos)
+- **Formato:** CSV com delimitador vírgula, encoding UTF-8
 
-## 🎯 Regras Contextuais
+### 📸 **base-instagram-separada-odio-lgbt.csv**
+- **Total:** 2.098 registros
+- **Fonte:** Comentários do Instagram coletados durante ataques ao podcast
+- **Estrutura:** Apenas coluna `text`
+- **Formato:** CSV com delimitador vírgula, encoding UTF-8
 
-### Proteção de Termos de Gênero
-- **"boyceta"**: Detecta contexto positivo vs negativo
-- **"sapatão"**: Protege identidade lésbica
-- **"travesti"**: Respeita identidade trans
+### 🎵 **base-tiktok-separada-odio-lgbt.csv**
+- **Total:** 6.271 registros
+- **Fonte:** Comentários do TikTok relacionados a conteúdo LGBTQIA+
+- **Estrutura:** Apenas coluna `text`
+- **Formato:** CSV com delimitador vírgula, encoding UTF-8
 
-### Contextos Detectados
-- **Positivo**: orgulho, beleza, identidade, expressão
-- **Negativo**: nojo, escroto, desgraçado, arrombado
-- **Educativo**: definição, conceito, explicação
-- **Ridicularização**: engraçado, hilário, cômico
+### 📹 **base-youtube-separada-odio-lgbt.csv**
+- **Total:** 3.733 registros
+- **Fonte:** Comentários do YouTube em vídeos LGBTQIA+
+- **Estrutura:** Apenas coluna `text`
+- **Formato:** CSV com delimitador vírgula, encoding UTF-8
 
-## 📁 Estrutura
+---
 
+## 📢 Contexto Social
+
+Estes dados foram coletados durante uma **onda de ódio coordenada** contra o podcast **Entre Amigues** da equipe **Código Não Binário**. Os comentários representam discurso real de ódio dirigido à comunidade LGBTQIA+.
+
+**Podcast:** Entre Amigues - https://linktr.ee/entre_amigues  
+**Equipe:** Código Não Binário  
+**Período:** Coleta realizada durante ataques coordenados  
+**Anotação:** Manual por especialistas em direitos LGBTQIA+
+
+---
+
+## 📁 Estrutura dos Arquivos
+
+Todos os CSVs seguem o formato:
+
+```csv
+text
+"Comentário de ódio exemplo..."
+"Outro comentário..."
 ```
-datasets/
-├── dataset_binary_expanded_with_toldbr.csv    # Dataset binário expandido
-├── dataset_manual_final.csv                   # Dataset manual
-├── dataset_specialized_final.csv              # Dataset especializado
-├── dataset_toldbr_final.csv                  # Dataset ToLD-BR
-├── dataset_obvious_hate.csv                  # Casos óbvios de hate
-├── dataset_three_platforms_20251020_140406.csv    # Dataset três redes sociais
-├── dataset_three_platforms_clean_20251020_140406.csv  # Dataset limpo
-└── README_three_platforms_20251020_140406.md         # Documentação
-```
+
+- **Delimitador:** Vírgula (,)
+- **Encoding:** UTF-8
+- **Aspas:** Textos entre aspas duplas para evitar problemas com vírgulas
+- **Sem índices:** Coluna de ID removida para focar apenas no texto
+
+---
 
 ## 🚀 Como Usar
+
+### Python (Pandas)
 
 ```python
 import pandas as pd
 
-# Carregar dataset binário
-df_binary = pd.read_csv("dataset_binary_expanded_with_toldbr.csv")
+# Carregar base geral
+df_geral = pd.read_csv('base-geral-odio-lgbt.csv')
 
-# Carregar dataset manual
-df_manual = pd.read_csv("dataset_manual_final.csv")
+# Carregar base por plataforma
+df_instagram = pd.read_csv('base-instagram-separada-odio-lgbt.csv')
+df_tiktok = pd.read_csv('base-tiktok-separada-odio-lgbt.csv')
+df_youtube = pd.read_csv('base-youtube-separada-odio-lgbt.csv')
 
-# Carregar dataset especializado
-df_specialized = pd.read_csv("dataset_specialized_final.csv")
-
-# Carregar dataset três redes sociais
-df_three_platforms = pd.read_csv("dataset_three_platforms_20251020_140406.csv")
+print(f"Total de comentários gerais: {len(df_geral)}")
+print(f"Total Instagram: {len(df_instagram)}")
+print(f"Total TikTok: {len(df_tiktok)}")
+print(f"Total YouTube: {len(df_youtube)}")
 ```
 
-## 📈 Melhorias Recentes
+### Python (Hugging Face Datasets)
 
-- ✅ Integração com ToLD-BR
-- ✅ Regras contextuais implementadas
-- ✅ Proteção de termos de dissidência de gênero
-- ✅ Detecção de contexto positivo vs negativo
-- ✅ Threshold adaptativo otimizado
-- ✅ **NOVO**: Dataset com dados das três redes sociais (Instagram, TikTok, YouTube)
+```python
+from datasets import load_dataset
 
-## 🔗 Links
+# Carregar do Hugging Face
+dataset = load_dataset("Veronyka/base-dados-odio-lgbtqia")
+```
 
-- **Modelo**: [radar-social-lgbtqia](https://huggingface.co/Veronyka/radar-social-lgbtqia)
-- **Space**: [radar-social-lgbtqia-space](https://huggingface.co/spaces/Veronyka/radar-social-lgbtqia-space)
-- **Dataset HF**: [base-dados-odio-lgbtqia](https://huggingface.co/datasets/Veronyka/base-dados-odio-lgbtqia)
+---
 
-## ⚠️ Importante
+## 📈 Estatísticas
 
-Este dataset foi desenvolvido para proteger a comunidade LGBTQIA+ e detectar discurso de ódio. As regras contextuais garantem que termos de identidade de gênero sejam respeitados.
+| Dataset | Total de Registros |
+|---------|-------------------|
+| Geral (3 plataformas) | 12.102 |
+| Instagram | 2.098 |
+| TikTok | 6.271 |
+| YouTube | 3.733 |
 
-## 📊 Dataset Três Redes Sociais
+**Total único:** 12.102 comentários (consolidados das 3 plataformas)
 
-O novo dataset inclui dados coletados de três redes sociais:
-- **Instagram**: 2.098 comentários
-- **TikTok**: 6.271 comentários  
-- **YouTube**: 3.733 comentários
+---
 
-**Total**: 12.102 comentários consolidados para análise e treinamento de modelos.
+## 🔒 Privacidade e Ética
+
+- ✅ **Dados pessoais removidos**: IDs, nomes de usuários, URLs
+- ✅ **Anonimização**: Identificadores substituídos
+- ✅ **Conformidade LGPD**: Dados processados conforme legislação brasileira
+- ✅ **Uso responsável**: Apenas para pesquisa e combate ao ódio
+
+### Processamento Aplicado
+
+- URLs → `[URL]`
+- @usuario → `[MENTION]`
+- #hashtag → `[HASHTAG]`
+- Remoção de textos < 3 caracteres
+- Normalização de espaços em branco
+
+---
+
+## 🤝 Contribuição
+
+Para contribuir com novos dados ou melhorias:
+
+1. Faça um fork do repositório
+2. Adicione seus dados seguindo o padrão (apenas coluna `text`)
+3. Valide que não contém dados pessoais
+4. Submeta um pull request
+
+---
+
+## 📄 Licença
+
+cc-by-nc-sa-4.0 - Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International
+
+---
+
+## 🔗 Links Relacionados
+
+- **Modelo treinado:** [tupi-bert-lgbtqia-trained](https://huggingface.co/Veronyka/tupi-bert-lgbtqia-trained)
+- **Space de análise:** [radar-social-lgbtqia-v2](https://huggingface.co/spaces/Veronyka/radar-social-lgbtqia-v2)
+- **GitHub do Projeto:** Código Não Binário
+
+---
+
+## ⚠️ Aviso Importante
+
+Este dataset contém conteúdo sensível relacionado a discurso de ódio contra pessoas LGBTQIA+. Use com responsabilidade e sempre considere o impacto ético de suas aplicações.
+
+**Objetivo:** Combater ódio, não propagá-lo.
+
+---
+
+**📅 Versão:** 2.0 - Processado em 25/10/2025  
+**👤 Autor:** Veronyka Gimenes  
+**🏳️‍🌈 Código Não Binário**
