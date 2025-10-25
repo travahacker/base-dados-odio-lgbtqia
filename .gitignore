@@ -72,3 +72,7 @@ checkpoint-*/
 # Hugging Face
 .cache/
 huggingface_hub/
+v2/
+clean-and-annotated-data/
+datasets_originais/
+datasets/
