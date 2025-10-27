@@ -33,12 +33,54 @@ Fornecer bases de dados limpas e organizadas de comentários de ódio contra pes
 - **Estrutura:** Apenas coluna `text`
 - **Formato:** CSV com delimitador vírgula, encoding UTF-8
 
-### 📸 **base-instagram-separada-odio-lgbt-anotada.csv** ⭐ NOVO
+### 📸 **base-instagram-separada-odio-lgbt-anotada.csv** ⭐ NOVO - COMPLETA
 - **Total:** 1.891 registros (962 positivo, 703 ódio, 226 neutro)
 - **Fonte:** Comentários do Instagram com anotações manuais detalhadas
-- **Estrutura:** `text`, `avaliacao` (positivo/neutro/odio)
-- **Formato:** CSV com delimitador vírgula, encoding UTF-8
-- **Diferencial:** Única base com classificação manual validada por especialistas
+- **Formato:** CSV com delimitador ponto-e-vírgula (;), encoding UTF-8
+- **Diferencial:** Única base com classificação manual e categorização detalhada
+
+**Colunas de Metadados:**
+- `id`: ID do comentário
+- `Comment Text`: Texto do comentário
+- `Comment Date`: Data do comentário
+- `Comment Likes`: Número de curtidas
+- `Has Replies`: Possui respostas (Sim/Não)
+- `Reply Count`: Número de respostas
+- `avaliacao`: Classificação geral (positivo/neutro/odio)
+- `has_emoji`: Possui emoji (0/1)
+
+**Colunas de Categorização de Ódio (0/1):**
+- `assedio_insulto`: Assédio e insulto
+- `ameaca_incitacao`: Ameaça e incitação
+- `patologizacao_pseudociencia`: Patologização e pseudociência
+- `transfobia`: Transfobia
+- `homofobia`: Homofobia
+- `lesbofobia`: Lesbofobia
+- `bifobia`: Bifobia
+- `intersexofobia`: Intersexofobia
+- `lgbtfobia`: LGBTfobia geral
+- `racismo`: Racismo
+- `gordofobia`: Gordofobia
+- `intolerancia_religiosa`: Intolerância religiosa
+- `misgendering_deadnaming`: Misgendering e deadnaming
+- `desumanizacao_animalizacao`: Desumanização e animalização
+- `sexualizacao_assedio_sexual`: Sexualização e assédio sexual
+- `panico_moral_criancas`: Pânico moral sobre crianças
+- `desinformacao_genero`: Desinformação sobre gênero
+
+**Colunas de Análise de Emoji (0/1):**
+- `emoji_negacao_identidade`: Emoji de negação de identidade
+- `emoji_violencia`: Emoji de violência
+- `emoji_desumanizacao`: Emoji de desumanização
+- `emoji_morte`: Emoji de morte
+- `emoji_zombaria`: Emoji de zombaria
+- `emoji_positivo`: Emoji positivo
+
+**Colunas Adicionais:**
+- `dm_link`: Link para mensagem direta
+- `severidade_global`: Nível de severidade (0-2)
+
+Esta é a **única base com categorização detalhada manual**, permitindo análise granular dos tipos de discurso de ódio.
 
 ### 🎵 **base-tiktok-separada-odio-lgbt.csv**
 - **Total:** 6.271 registros
@@ -94,19 +136,27 @@ df_geral = pd.read_csv('base-geral-odio-lgbt.csv')
 
 # Carregar base por plataforma
 df_instagram = pd.read_csv('base-instagram-separada-odio-lgbt.csv')
-df_instagram_anotada = pd.read_csv('base-instagram-separada-odio-lgbt-anotada.csv')  # ⭐ Com classificação
+df_instagram_anotada = pd.read_csv('base-instagram-separada-odio-lgbt-anotada.csv', sep=';')  # ⭐ COMPLETA
 df_tiktok = pd.read_csv('base-tiktok-separada-odio-lgbt.csv')
 df_youtube = pd.read_csv('base-youtube-separada-odio-lgbt.csv')
 
 print(f"Total de comentários gerais: {len(df_geral)}")
 print(f"Total Instagram: {len(df_instagram)}")
-print(f"Total Instagram ANOTADA: {len(df_instagram_anotada)} (com labels)")
+print(f"Total Instagram ANOTADA: {len(df_instagram_anotada)} (com labels e categorização detalhada)")
 print(f"Total TikTok: {len(df_tiktok)}")
 print(f"Total YouTube: {len(df_youtube)}")
 
 # Análise da base anotada
 print(f"\nDistribuição na base anotada:")
 print(df_instagram_anotada['avaliacao'].value_counts())
+
+# Análise detalhada de categorias de ódio
+print(f"\nCategorias de ódio mais frequentes:")
+categorias = ['transfobia', 'homofobia', 'lesbofobia', 'lgbtfobia', 'assedio_insulto']
+for cat in categorias:
+    if cat in df_instagram_anotada.columns:
+        count = df_instagram_anotada[cat].sum()
+        print(f"  {cat}: {count} ocorrências")
 ```
 
 ### Python (Hugging Face Datasets)
