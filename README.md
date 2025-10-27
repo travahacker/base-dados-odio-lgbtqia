@@ -82,6 +82,29 @@ Fornecer bases de dados limpas e organizadas de comentários de ódio contra pes
 
 Esta é a **única base com categorização detalhada manual**, permitindo análise granular dos tipos de discurso de ódio.
 
+### 📸 **base-instagram-separada-odio-lgbt-aumentada.csv** 🤖 EXPANDIDA
+- **Total:** 5.133 registros (variáveis por rastreamento)
+- **Fonte:** Base Instagram expandida via Self-Instruct para treinamento de modelo
+- **Formato:** CSV com delimitador vírgula, encoding UTF-8
+- **Diferencial:** Base expandida usando técnicas de data augmentation
+
+**Colunas:**
+- `text`: Texto do comentário
+- `is_hate`: Classificação binária (0=não-hate, 1=hate)
+- `source`: Origem do registro (original/augmented)
+
+**Técnicas de Expansão Aplicadas (Self-Instruct):**
+- **Paráfrases:** Variações de pontuação, maiúsculas/minúsculas, espaçamento
+- **Substituição de emojis:** 😂→😆, 🤣→😂, ❤️→💕, etc.
+- **Variações de termos LGBTQIA+:** 'gay'→'homossexual', 'lésbica'→'sapatão', 'trans'→'transgênero'
+- **Substituição de termos ofensivos:** Variações ortográficas (ex: 'viado'→'veado')
+- **Geração de sinônimos:** Sinônimos contextuais para intensificar/atenuar
+- **Variações de contexto:** Adição de intensificadores (hate) ou contexto positivo (não-hate)
+
+**Objetivo:** Esta base foi criada especificamente para o **treinamento do modelo Tupi-BERT-Large** (fine-tuning), expandindo a base original de ~2.098 para ~5.133 exemplos para melhor performance em classificação binária (hate/não-hate).
+
+**Uso:** Ideal para treinamento de modelos de classificação binária de hate speech.
+
 ### 🎵 **base-tiktok-separada-odio-lgbt.csv**
 - **Total:** 6.271 registros
 - **Fonte:** Comentários do TikTok relacionados a conteúdo LGBTQIA+
@@ -137,12 +160,14 @@ df_geral = pd.read_csv('base-geral-odio-lgbt.csv')
 # Carregar base por plataforma
 df_instagram = pd.read_csv('base-instagram-separada-odio-lgbt.csv')
 df_instagram_anotada = pd.read_csv('base-instagram-separada-odio-lgbt-anotada.csv', sep=';')  # ⭐ COMPLETA
+df_instagram_aumentada = pd.read_csv('base-instagram-separada-odio-lgbt-aumentada.csv')  # 🤖 EXPANDIDA
 df_tiktok = pd.read_csv('base-tiktok-separada-odio-lgbt.csv')
 df_youtube = pd.read_csv('base-youtube-separada-odio-lgbt.csv')
 
 print(f"Total de comentários gerais: {len(df_geral)}")
 print(f"Total Instagram: {len(df_instagram)}")
 print(f"Total Instagram ANOTADA: {len(df_instagram_anotada)} (com labels e categorização detalhada)")
+print(f"Total Instagram AUMENTADA: {len(df_instagram_aumentada)} (para treinamento)")
 print(f"Total TikTok: {len(df_tiktok)}")
 print(f"Total YouTube: {len(df_youtube)}")
 
@@ -177,11 +202,13 @@ dataset = load_dataset("Veronyka/base-dados-odio-lgbtqia")
 | Geral (3 plataformas) | 12.102 |
 | Instagram | 2.098 |
 | Instagram Anotada ⭐ | 1.891 |
+| Instagram Aumentada 🤖 | 5.133 |
 | TikTok | 6.271 |
 | YouTube | 3.733 |
 
 **Total único:** 12.102 comentários (consolidados das 3 plataformas)  
-**Base anotada:** 1.891 comentários com classificação manual validada
+**Base anotada:** 1.891 comentários com classificação manual validada  
+**Base aumentada:** 5.133 comentários para treinamento (Self-Instruct)
 
 ---
 
