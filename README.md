@@ -33,6 +33,13 @@ Fornecer bases de dados limpas e organizadas de comentários de ódio contra pes
 - **Estrutura:** Apenas coluna `text`
 - **Formato:** CSV com delimitador vírgula, encoding UTF-8
 
+### 📸 **base-instagram-separada-odio-lgbt-anotada.csv** ⭐ NOVO
+- **Total:** 1.891 registros (962 positivo, 703 ódio, 226 neutro)
+- **Fonte:** Comentários do Instagram com anotações manuais detalhadas
+- **Estrutura:** `text`, `avaliacao` (positivo/neutro/odio)
+- **Formato:** CSV com delimitador vírgula, encoding UTF-8
+- **Diferencial:** Única base com classificação manual validada por especialistas
+
 ### 🎵 **base-tiktok-separada-odio-lgbt.csv**
 - **Total:** 6.271 registros
 - **Fonte:** Comentários do TikTok relacionados a conteúdo LGBTQIA+
@@ -87,13 +94,19 @@ df_geral = pd.read_csv('base-geral-odio-lgbt.csv')
 
 # Carregar base por plataforma
 df_instagram = pd.read_csv('base-instagram-separada-odio-lgbt.csv')
+df_instagram_anotada = pd.read_csv('base-instagram-separada-odio-lgbt-anotada.csv')  # ⭐ Com classificação
 df_tiktok = pd.read_csv('base-tiktok-separada-odio-lgbt.csv')
 df_youtube = pd.read_csv('base-youtube-separada-odio-lgbt.csv')
 
 print(f"Total de comentários gerais: {len(df_geral)}")
 print(f"Total Instagram: {len(df_instagram)}")
+print(f"Total Instagram ANOTADA: {len(df_instagram_anotada)} (com labels)")
 print(f"Total TikTok: {len(df_tiktok)}")
 print(f"Total YouTube: {len(df_youtube)}")
+
+# Análise da base anotada
+print(f"\nDistribuição na base anotada:")
+print(df_instagram_anotada['avaliacao'].value_counts())
 ```
 
 ### Python (Hugging Face Datasets)
@@ -113,10 +126,12 @@ dataset = load_dataset("Veronyka/base-dados-odio-lgbtqia")
 |---------|-------------------|
 | Geral (3 plataformas) | 12.102 |
 | Instagram | 2.098 |
+| Instagram Anotada ⭐ | 1.891 |
 | TikTok | 6.271 |
 | YouTube | 3.733 |
 
-**Total único:** 12.102 comentários (consolidados das 3 plataformas)
+**Total único:** 12.102 comentários (consolidados das 3 plataformas)  
+**Base anotada:** 1.891 comentários com classificação manual validada
 
 ---
 
