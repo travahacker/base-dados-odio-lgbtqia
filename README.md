@@ -1,3 +1,9 @@
+> ⚠️ **Repositório arquivado — espelho.** O dataset canônico está no Hugging Face:
+> **[Base de Dados de Ódio LGBTQIA+](https://huggingface.co/datasets/Veronyka/base-dados-odio-lgbtqia)**.
+> É lá que ficam as versões atualizadas, a licença e a documentação. Este espelho não é atualizado.
+
+---
+
 ---
 license: cc-by-nc-sa-4.0
 language:
